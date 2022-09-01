@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MudVirtual", "MudVirtual\MudVirtual.csproj", "{CDA123B8-0799-49DA-B3CF-4DCEAFCD5350}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MudBlazor", "MudBlazor", "{EAB5AA60-06E7-4BC3-8192-FD00A640811D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MudBlazor", "MudBlazor", "{E5A799F2-80D8-4C59-A9D5-0D59E4FEC2AB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{B8F2A23E-74C8-4348-8B24-0092C7D154B2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MudBlazor", "MudBlazor\MudBlazor\src\MudBlazor\MudBlazor.csproj", "{7460DA26-73FE-42A4-9863-3B2AFF983B30}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CDA123B8-0799-49DA-B3CF-4DCEAFCD5350}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDA123B8-0799-49DA-B3CF-4DCEAFCD5350}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDA123B8-0799-49DA-B3CF-4DCEAFCD5350}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDA123B8-0799-49DA-B3CF-4DCEAFCD5350}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7460DA26-73FE-42A4-9863-3B2AFF983B30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7460DA26-73FE-42A4-9863-3B2AFF983B30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7460DA26-73FE-42A4-9863-3B2AFF983B30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7460DA26-73FE-42A4-9863-3B2AFF983B30}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E5A799F2-80D8-4C59-A9D5-0D59E4FEC2AB} = {EAB5AA60-06E7-4BC3-8192-FD00A640811D}
+		{B8F2A23E-74C8-4348-8B24-0092C7D154B2} = {E5A799F2-80D8-4C59-A9D5-0D59E4FEC2AB}
+		{7460DA26-73FE-42A4-9863-3B2AFF983B30} = {B8F2A23E-74C8-4348-8B24-0092C7D154B2}
+	EndGlobalSection
+EndGlobal

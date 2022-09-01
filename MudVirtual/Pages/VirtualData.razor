@@ -1,0 +1,48 @@
+﻿@page "/virtualData"
+@using MudVirtual.Data
+@inject WeatherForecastService ForecastService
+
+<PageTitle>Virtualized weather forecast</PageTitle>
+
+<MudText Typo="Typo.h3" GutterBottom="true">Virtualized weather forecast</MudText>
+<MudText Class="mb-8">This component demonstrates fetching data from the server.</MudText>
+
+<ZondVirtualTable Height="350px" ItemsProvider="LoadForecasts" Hover="true" Elevation="0">
+    <HeaderContent>
+        <MudTh>
+            Date
+        </MudTh>
+        <MudTh>
+            Temp. (C)
+
+        </MudTh>
+        <MudTh>
+            Temp. (F)
+
+        </MudTh>
+        <MudTh>
+            Summary
+        </MudTh>
+    </HeaderContent>
+    <RowTemplate>
+        <MudTd DataLabel="Date">@context.Date</MudTd>
+        <MudTd DataLabel="Temp. (C)">@context.TemperatureC</MudTd>
+        <MudTd DataLabel="Temp. (F)">@context.TemperatureF</MudTd>
+        <MudTd DataLabel="Summary">@context.Summary</MudTd>
+    </RowTemplate>
+</ZondVirtualTable>
+
+<Virtualize ItemsProvider="LoadForecasts">
+    <p>@context.TemperatureC</p>
+</Virtualize>
+
+
+@code {
+
+    private async ValueTask<ItemsProviderResult<WeatherForecast>> LoadForecasts(ItemsProviderRequest request)
+    {
+        var forecasts = await ForecastService.GetVirtualForecastAsync(DateTime.Now, request.StartIndex, request.Count);
+
+        return new ItemsProviderResult<WeatherForecast>(forecasts, int.MaxValue);
+    }
+}
